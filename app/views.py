@@ -10,15 +10,14 @@ from drf_route import utils
 class UsersViewSet(mixins.RetrieveModelMixin,
                    mixins.ListModelMixin,
                    viewsets.GenericViewSet):
+    """Users and everything else"""
     serializer_class = UserSerializer
     queryset = User.objects.all()
 
     @list_route(methods=['post'])
     def register(self, request) -> Response:
+        """Register new user"""
         return utils.get_mixin(self, request, 'create')
 
-
-UsersViewSet.__doc__ = "Users and everything else"
-UsersViewSet.list.__doc__ = 'List of all users'
-UsersViewSet.register.__doc__ = "Register new user"
-UsersViewSet.retrieve.__doc__ = "Get one user"
+    list.__doc__ = 'List of all users'
+    retrieve.__doc__ = "Get one user"
