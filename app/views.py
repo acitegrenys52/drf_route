@@ -13,7 +13,6 @@ class UsersViewSet(mixins.RetrieveModelMixin,
     """Users and everything else"""
     serializer_class = UserSerializer
     queryset = User.objects.all()
-    print('lol')
 
     @list_route(methods=['post'])
     def register(self, request) -> Response:
@@ -24,6 +23,3 @@ class UsersViewSet(mixins.RetrieveModelMixin,
 
 UsersViewSet.list.__doc__ = 'List of all users'
 UsersViewSet.retrieve.__doc__ = "Get one user"
-
-print('test')
-print('beleberda')
