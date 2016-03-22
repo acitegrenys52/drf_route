@@ -18,6 +18,7 @@ class UsersViewSet(mixins.RetrieveModelMixin,
     def register(self, request) -> Response:
         """Register new user"""
         return utils.get_mixin(self, request, 'create')
+    register.__doc__ = "lol"
 
 
 UsersViewSet.list.__doc__ = 'List of all users'
