@@ -1,0 +1,4 @@
+mypython:
+  image: python:3.4
+  volumes:
+    - .:/code
