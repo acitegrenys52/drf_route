@@ -23,3 +23,4 @@ class UsersViewSet(mixins.RetrieveModelMixin,
 
 UsersViewSet.list.__doc__ = 'List of all users'
 UsersViewSet.retrieve.__doc__ = "Get one user"
+"""lolka"""
