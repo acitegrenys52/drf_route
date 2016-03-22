@@ -25,3 +25,4 @@ UsersViewSet.list.__doc__ = 'List of all users'
 UsersViewSet.retrieve.__doc__ = "Get one user"
 
 print('test')
+print('beleberda')
