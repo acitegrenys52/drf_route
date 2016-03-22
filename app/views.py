@@ -19,5 +19,6 @@ class UsersViewSet(mixins.RetrieveModelMixin,
         """Register new user"""
         return utils.get_mixin(self, request, 'create')
 
-    list.__doc__ = 'List of all users'
-    retrieve.__doc__ = "Get one user"
+
+UsersViewSet.list.__doc__ = 'List of all users'
+UsersViewSet.retrieve.__doc__ = "Get one user"
